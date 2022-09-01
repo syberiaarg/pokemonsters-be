@@ -2,7 +2,8 @@ import express from "express";
 import router from "./routes";
 import cors from "cors"
 
-const { NODE_ENV, PORT } = process.env;
+const PORT = process.env.PORT || 3001
+const { NODE_ENV } = process.env;
 const bodyParser = express.json();
 const app = express();
 
