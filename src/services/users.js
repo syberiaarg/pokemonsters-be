@@ -6,6 +6,11 @@ const fetchUsers = async () => {
 };
 
 const createUser = async (user) => {
+
+  const repeated = await db.select().table('users').where('email', user.email).first()
+
+  if (repeated) { throw { status: 400, message: 'User already exist' } }
+
   return await db.table('users').insert(user)
 };
 

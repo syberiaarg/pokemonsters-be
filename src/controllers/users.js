@@ -12,7 +12,6 @@ const fetch = async (req, res, next) => {
 const create = async (req, res, next) => {
   try {
     const result = await UserService.createUser(req.body);
-    console.log(result)
     res.send(result);
   } catch (error) {
     next(error);
