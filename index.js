@@ -1,6 +1,6 @@
-import dotenv from "dotenv";
-import expand from "dotenv-expand";
+const dotEnv = require("dotenv");
+const expand = require("dotenv-expand");
 
-expand(dotenv.config());
+expand(dotEnv.config());
 
-require("./src");
+require("./dist");
