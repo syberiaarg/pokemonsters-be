@@ -3,4 +3,4 @@ const expand = require("dotenv-expand");
 
 expand(dotEnv.config());
 
-require("./dist");
+require("./src");
