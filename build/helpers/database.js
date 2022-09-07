@@ -12,13 +12,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var _process$env = process.env,
     MYSQL_HOST = _process$env.MYSQL_HOST,
     MYSQL_DB_NAME = _process$env.MYSQL_DB_NAME,
-    MYSQL_USER = _process$env.MYSQL_USER;
+    MYSQL_USER = _process$env.MYSQL_USER,
+    MYSQL_PASSWORD = _process$env.MYSQL_PASSWORD;
 var db = (0, _knex["default"])({
   client: 'mysql',
   connection: {
     host: MYSQL_HOST,
     user: MYSQL_USER,
-    database: MYSQL_DB_NAME
+    database: MYSQL_DB_NAME,
+    password: MYSQL_PASSWORD
   }
 });
 exports.db = db;
