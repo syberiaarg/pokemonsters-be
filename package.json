@@ -6,7 +6,7 @@
   "scripts": {
     "babel-node": "babel-node",
     "dev": "nodemon --exec npm run babel-node -- src/index.js",
-    "start": "npm run build && node ./build/bin/www",
+    "start": "npm run build && node ./build/index.js",
     "build": "npm run clean && npm run babel-build",
     "babel-build": "babel -d ./build ./src -s",
     "clean": "rm -rf ./build && mkdir build"
